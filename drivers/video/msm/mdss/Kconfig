@@ -83,9 +83,19 @@ config FB_MSM_MDSS_FRC_DEBUG
 	statistics and check whether its output pattern matches expected
 	cadence.
 
+
 config FB_MSM_MDSS_XIAOMI_ULYSSE
 	depends on FB_MSM_MDSS
 	bool "Support for Xiaomi ulysse"
-	default n
+	default y
 	---help---
 	Say Y here to enable support for Xiaomi Redmi Note 5A.
+
+config FB_MSM_MDSS_KCAL_CTRL
+	depends on FB_MSM_MDSS
+	bool "MDSS color control"
+default y
+	---help---
+	  Enable sysfs for post-processing control of mdss-mdp5 display
+	  controllers in MDSS.
+
